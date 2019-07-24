@@ -1,0 +1,5 @@
+jobs:
+  include:
+    - stage: "Prerequisites"
+      script: "sudo apt-get update && sudo apt-get install google-cloud-sdk"
+      
