@@ -1,0 +1,14 @@
+resources:
+# Instance 
+- name: sample-instance
+  type: compute.v1.instance
+  properties: 
+    disks:
+      - type: PERSISTENT
+        source: $(ref.example-disk.selfLink)
+# Disk 
+- name: example-disk 
+  type: compute.v1.disk
+  properties:
+    zone: us-central1-a
+    sizeGb: 10
